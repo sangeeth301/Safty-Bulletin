@@ -1,0 +1,113 @@
+.slds-modal__container {
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    border-radius: 12px;
+}
+
+.slds-modal__header {
+    background: linear-gradient(135deg, #0176d3 0%, #005fb2 100%);
+    color: white;
+}
+
+.slds-modal__title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.slds-box_x-small {
+    background: linear-gradient(135deg, #e8f4fd 0%, #f0f9ff 100%);
+    border: 1px solid #b3d9ff;
+}
+
+.slds-badge {
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+.slds-datatable tr:hover {
+    background: #f8f9fa;
+}
+
+.status-active {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-active::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    margin-right: 6px;
+}
+
+.testMail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+   
+}
+.test-mail-sticky{
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 1rem;
+    border-top: 1px solid #dddbda;
+    z-index: 10;
+}
+
+
+
+/* Ensure the input and button take appropriate space */
+.testMail lightning-input {
+    flex: 1; /* Allow input to take available space */
+    min-width: 200px; /* Optional: ensure input doesn't shrink too much */
+    margin-top: 0 !important; /* Override any default top margin */
+}
+
+/* Ensure the button aligns properly */
+.testMail lightning-button {
+    flex: 0 0 auto; /* Button takes only its natural width */
+    margin-top: 0; /* Ensure no extra top margin on button */
+}
+
+@media (max-width: 768px) {
+    .slds-modal__container {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .slds-modal__content {
+        padding: 20px;
+    }
+    
+    .slds-grid {
+        flex-direction: column;
+    }
+}
+.custom-container {
+    display: grid;
+    grid-template-columns: auto 200px;
+    align-items: end;    
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Make sure it's above all other elements */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
